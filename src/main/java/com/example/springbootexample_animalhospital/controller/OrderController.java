@@ -24,7 +24,7 @@ public class OrderController {
 
     @GetMapping("/all")
     public String listOwners(Model model){
-        model.addAttribute("Owners",animalService.fetchAnimalsOwnersByIdInnerJoin());
+        model.addAttribute("Owners",animalService.fetchOwnersAnimalsJoinFetch());
         return "animals";
     }
     @PostMapping("/newOrder")

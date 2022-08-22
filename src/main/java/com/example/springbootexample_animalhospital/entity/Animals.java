@@ -81,5 +81,12 @@ public class Animals implements Serializable {
                 ", aciklama='" + aciklama + '\'' +
                 '}';
     }
-
+    @ManyToOne(
+            targetEntity = Owners.class,
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL
+    )
+    @JoinColumn(name = "owner_id")
+    private Owners owners;
 }
+

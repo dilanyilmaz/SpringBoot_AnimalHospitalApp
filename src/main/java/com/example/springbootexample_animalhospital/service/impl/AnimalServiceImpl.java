@@ -18,8 +18,8 @@ public class AnimalServiceImpl implements AnimalService {
     }
 
     @Override
-    public List<Animals> fetchAnimalsOwnersByIdInnerJoin() {
-        return animalRepository.fetchAnimalsOwnersByIdInnerJoin();
+    public List<Animals> fetchOwnersAnimalsJoinFetch() {
+        return animalRepository.fetchOwnersAnimalsJoinFetch();
     }
 
     @Override

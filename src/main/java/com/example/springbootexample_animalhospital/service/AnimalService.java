@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface AnimalService {
     //Read operation
-    List<Animals> fetchAnimalsOwnersByIdInnerJoin();
+    List<Animals> fetchOwnersAnimalsJoinFetch();
 
     //Save operation
     Animals saveAnimals(Animals animals);

@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface OwnerRepository extends JpaRepository<Owners,Long> {
-    @Query("SELECT o,a from Owners o, Animals a")
     List<Owners> getAllOwners();
 
 }

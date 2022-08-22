@@ -1,11 +1,14 @@
 package com.example.springbootexample_animalhospital.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "ownertable")
-public class Owners {
+public class Owners implements Serializable {
+    private static final long serialVersionUID = 1L;
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     @Id
@@ -101,11 +104,10 @@ public class Owners {
     }
 
     @OneToMany(
-            targetEntity = Animals.class,
             cascade = CascadeType.ALL,
+            mappedBy = "owners",
             orphanRemoval = true
     )
-    @JoinColumn(name = "pets",referencedColumnName = "id")
-    private List<Animals> animals;
+    private List<Animals> animals= new ArrayList<>();
 
 }
