@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Animal Management System</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div>
+    <table class=".table .table-dark">
+        <thead class=".thead-light">
+        <tr>
+            <th scope="col">tur</th>
+            <th scope="col">cins</th>
+            <th scope="col">yas</th>
+            <th scope="col">aciklama</th>
+        </tr>
+        </thead>
+
+        <tbody class="summary">
+        <tr th:each="anm:${index}">
+            <td th:text="${anm}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
