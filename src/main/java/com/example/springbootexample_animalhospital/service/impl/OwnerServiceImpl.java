@@ -18,9 +18,6 @@ public class OwnerServiceImpl implements OwnerService {
         this.ownerRepository = ownerRepository;
     }
 
-    public List<Owners> getAllOwners() {
-        return ownerRepository.getAllOwners();
-    }
     @Override
     public Owners saveOwners(Owners owners){return ownerRepository.save(owners);}
 }

@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface OwnerService {
-    List<Owners> getAllOwners();
+
     Owners saveOwners(Owners owners);
 }

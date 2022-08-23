@@ -7,6 +7,4 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface OwnerRepository extends JpaRepository<Owners,Long> {
-    List<Owners> getAllOwners();
-
 }

@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import com.example.springbootexample_animalhospital.service.AnimalService;
 
+import java.util.Optional;
+
 @Controller
 public class OrderController {
     private final AnimalService animalService;
@@ -24,8 +26,8 @@ public class OrderController {
 
     @GetMapping("/all")
     public String listOwners(Model model){
-        model.addAttribute("Owners",animalService.fetchOwnersAnimalsJoinFetch());
-        return "animals";
+        model.addAttribute("Animals",animalService.fetchOwnersAnimalsJoinFetch());
+        return "index";
     }
     @PostMapping("/newOrder")
     public ResponseEntity<Owners> createOwners(@RequestBody Owners owners){
@@ -38,6 +40,12 @@ public class OrderController {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    @DeleteMapping("/{id}")
+    public void deleteOrder(@PathVariable("id") long id){
+        animalService.deleteOrder(id);
+    }
+
+
   /*  @GetMapping("/tutorials/{id}")
     public String getTutorialById(@PathVariable("id") long id , Model model) {
         model.addAttribute("index",animalService.getAnimalsById(id));

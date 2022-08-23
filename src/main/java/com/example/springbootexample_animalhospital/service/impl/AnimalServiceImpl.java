@@ -31,6 +31,8 @@ public class AnimalServiceImpl implements AnimalService {
     public Optional<Animals> getAnimalsById(long id) {
         return animalRepository.findById(id);
     }
+    @Override
+    public void deleteOrder(long id){  animalRepository.deleteById(id);}
 
    /*
     @Override

@@ -12,6 +12,6 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public interface AnimalRepository extends JpaRepository<Animals,Long>{
-    @Query(value = "SELECT a from Animals a inner join a.petowner b ")
+    @Query(value = "SELECT a, b from Animals a inner join a.owners b ")
     List<Animals> fetchOwnersAnimalsJoinFetch();
 }

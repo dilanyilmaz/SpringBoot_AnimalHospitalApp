@@ -71,6 +71,14 @@ public class Animals implements Serializable {
         this.aciklama = aciklama;
     }
 
+    public Owners getOwners() {
+        return owners;
+    }
+
+    public void setOwners(Owners owners) {
+        this.owners = owners;
+    }
+
     @Override
     public String toString() {
         return "Animals{" +

@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface AnimalService {
     //Read operation
     List<Animals> fetchOwnersAnimalsJoinFetch();
-
+    void deleteOrder(long id);
     //Save operation
     Animals saveAnimals(Animals animals);
     Optional<Animals> getAnimalsById(long id);
