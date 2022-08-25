@@ -1,7 +1,31 @@
 #form_main_div{
     background: #ffc107;
     padding: 20px;
-    border-radius: 10%;
+    border-radius: 25px;
     height: 350px;
+    z-index: 1;
 }
 input{margin: 5px;}
+.cat_div{
+    z-index: 99;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-attachment: inherit;
+    background-position:  center;
+    background-image: url('../images/karakedi.png');
+    height: 150px;
+    width: 100%;
+}
+.pet_div{
+    z-index: 99;
+    margin-top: 400px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-attachment: inherit;
+    background-position:  center;
+    background-image: url('../images/dog.png');
+    height: 200px;
+    width: 100%;
+}
